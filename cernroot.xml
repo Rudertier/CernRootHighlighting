@@ -68,14 +68,18 @@
 		<item>inline</item>
 		<item>mutable</item>
 		<item>wchar_t</item>
-		
+
+	</list>
+  <list name="kenum">
 		<item>kTRUE</item>
 		<item>kFALSE</item>
 		<item>NULL</item>
-		
-
-		
-		
+		<item>kTPCrefit</item>
+		<item>kITSrefit</item>
+		<item>kTPC</item>
+		<item>kTPCITS</item>
+		<item>kMB</item>
+		<item>kINT7</item>
 	</list>
   <list name="TClasses">
 		
@@ -184,6 +188,7 @@
 		<item>TTime</item>
 		<item>TTimer</item>
 		<item>Double_t</item>
+		<item>Char_t</item>
 		<item>Int_t</item>
 		<item>Float_t</item>
 		<item>Long_t</item>
@@ -203,7 +208,12 @@
 		<item>TCollection</item>
 		<item>TFolder</item>
 		<item>TParticle</item>
-
+		<item>TProfile</item>
+		<item>TObjArray</item>
+			
+	</list>
+	
+  <list name="AliClasses">
 		<item>AliESDtrack</item>
 		<item>AliExternalTrackParam</item>
 		<item>AlidNdPtAcceptanceCuts</item>
@@ -727,16 +737,25 @@
          To use it just <IncludeRules context="DetectQt4Extensions##Qt4/C++" />
       -->
     <context attribute="Normal Text" lineEndContext="#stay" name="DetectQt4Extensions">
-      <keyword attribute="Qt4 Functions" context="#stay" String="Qt4 Functions" />
-      <keyword attribute="Qt4 Classes" context="QtClassMember" String="Qt4Classes" />
-      <keyword attribute="Qt4 Types" context="#stay" String="TClasses" />
-      <keyword attribute="Qt4 Types" context="#stay" String="ÁliClasses" />
-      <keyword attribute="Qt4 Macros" context="#stay" String="Qt4Macros" />
+ <!--      <keyword attribute="Qt4 Functions" context="#stay" String="Qt4 Functions" /> -->
+ <!--      <keyword attribute="T-Classes" context="QtClassMember" String="Qt4Classes" /> -->
+<!--       <keyword attribute="Qt4 Macros" context="#stay" String="Qt4Macros" /> -->
+      <keyword attribute="T-Classes" context="#stay" String="TClasses" />
+      <keyword attribute="Ali-Classes" context="#stay" String="AliClasses" />
+      <keyword attribute="k-enums" context="#stay" String="kenum" />
     </context>
 
-    <context attribute="Qt4 Classes" lineEndContext="#pop" name="QtClassMember">
+    <context attribute="T-Classes" lineEndContext="#pop" name="QtClassMember">
       <IncludeRules context="DetectNSEnd" />
     </context>
+		
+		<context attribute="Ali-Classes" lineEndContext="#pop" name="Ali-Classes">
+      <IncludeRules context="DetectNSEnd" />
+    </context>
+	  <context attribute="kenums" lineEndContext="#pop" name="k-enums">
+      <IncludeRules context="DetectNSEnd" />
+    </context>
+
 
     <context lineEndContext="#pop" name="DetectNSEnd" attribute="Normal Text">
       <DetectIdentifier context="#stay" />
@@ -750,8 +769,11 @@
     <itemData name="Normal Text"    defStyleNum="dsNormal" spellChecking="false" />
     <itemData name="Qt4 Macros" defStyleNum="dsKeyword" color="#0095ff" selColor="#ffffff" bold="1" italic="0" spellChecking="false" />
     <itemData name="Qt4 Types" defStyleNum="dsDataType" spellChecking="false" />
-    <itemData name="Qt4 Classes" defStyleNum="dsOthers" spellChecking="false" />
     <itemData name="Qt4 Functions" defStyleNum="dsFunction" spellChecking="false" />
+		
+    <itemData name="k-enums" 			defStyleNum="dsKeyword" color="#000000" selColor="#000000" bold="1" spellChecking="false" />
+    <itemData name="T-Classes" 		defStyleNum="dsOthers" spellChecking="false" />
+    <itemData name="Ali-Classes" 	defStyleNum="dsFunction" spellChecking="false" />
   </itemDatas>
 </highlighting>
 
