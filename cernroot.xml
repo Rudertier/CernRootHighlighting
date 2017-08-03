@@ -78,6 +78,24 @@
 		<item>kITSrefit</item>
 		<item>kTPC</item>
 		<item>kTPCITS</item>
+		<item>kMCPion</item>
+		<item>kMCProton</item>
+		<item>kMCKaon</item>
+		<item>kMCRemainingRest</item>
+		<item>kMCRest</item>
+		<item>kMCLambda</item>
+		<item>kMCSigmaPlus</item>
+		<item>kMCSigmaMinus</item>
+		<item>kMCXiMinus</item>
+		<item>kMCOmegaMinus</item>
+		<item>kPlus</item>
+		<item>kMinus</item>
+		<item>kMCElectron</item>
+		<item>kMCMuon</item>
+		<item>kInclWoSimga</item>
+		<item>kAllPart</item>
+		<item>kITSpureSA</item>
+		<item>kAllTracks</item>
 		<item>kMB</item>
 		<item>kINT7</item>
 		<item>gROOT</item>
@@ -85,9 +103,6 @@
 		<item>gPad</item>
 	</list>
   <list name="TClasses">
-		
-		
-		
 		<item>TH1</item>
 		<item>TH1C</item>
 		<item>TH1D</item>
@@ -111,6 +126,7 @@
 		<item>THnSparse</item>
 		<item>THnSparseF</item>
 		<item>TBrowser</item>
+		<item>TDirectoryFile</item>
 		
 		<item>TF1</item>
 		<item>TF2</item>
@@ -182,6 +198,7 @@
 		<item>TComplex</item>
 		<item>TPRegexp</item>
 		<item>TObjArrayIter</item>
+		<item>TArrayF</item>
 		<item>TMapIter</item>
 		<item>TClass</item>
 		<item>TEnv</item> 
@@ -395,7 +412,7 @@
 		<item>AliESDfriendTrack</item>
 		<item>AlidNdPtHelper</item>
 		<item>AliPtResolAnalysisPbPb</item>
-		
+		<item>AliAnalysisDataContainer</item>
 		<item>AliLog</item>
 		<item>AliESDtrack</item>
 		<item>AliExternalTrackParam</item>
